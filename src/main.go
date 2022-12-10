@@ -1,15 +1,12 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"fmt"
 
-func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-			"say?": "good!",
-			"say": "yeee!",
-		})
-	})
-	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
+	"github.com/higayu624/portfolio_go/src/app/infrastructure"
+)
+
+func main(){
+	fmt.Println("server start")
+	infrastructure.Router.Run()
 }
