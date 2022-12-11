@@ -5,5 +5,5 @@ import (
 )
 
 type PlaylistRepository interface {
-	FindAll() (domain.Playlist, error)
+	GetOne() (domain.Playlist, error)
 }

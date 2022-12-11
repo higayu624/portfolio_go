@@ -9,9 +9,9 @@ type PlaylistRepository struct {
 }
 
 func (repository *PlaylistRepository) GetOne() (playlist domain.Playlist, err error) {
-	body, err := repository.RequestHandler.Request()
-	if err != nil {
-		return
-	}
+	body := repository.RequestHandler.Request()
+	// if err != nil {
+	// 	return
+	// }
 	return
 }

@@ -5,12 +5,22 @@ import (
 	"strconv"
 
 	"github.com/higayu624/portfolio_go/src/app/domain"
-	"github.com/higayu624/portfolio_go/src/app/interfaces/database"
+	"github.com/higayu624/portfolio_go/src/app/interfaces/requests"
 	"github.com/higayu624/portfolio_go/src/app/usecase"
 )
 
 type PlaylistController struct {
 	Interactor usecase.PlaylistInterator
+}
+
+func NewPlaylistController() *PlaylistController {
+	return &PlaylistController{
+		Interactor: usecase.PlaylistInteractor{
+			PlaylistRepository: &requests.PlaylistRepository{
+				RequstHandler: RequestHandler
+			},
+		},
+	}
 }
 
 func (controller *PlaylistController) Index(c Context) {

@@ -6,6 +6,7 @@ import (
 )
 
 func main(){
+	fmt.Println("iiiiiiiiiiiii")
 	fmt.Println("server start")
 	infrastructure.Router.Run()
 }

@@ -9,6 +9,7 @@ import (
 var Router *gin.Engine
 
 func init() {
+
 	r := gin.Default()//*Engineインスタンスを生成する(Endpoint, Middlewareを操作できる)
 
 	r.Use(cors.Default())//apiへのアクセスを許可するURL, method(GET, POST), header情報を設定できる
