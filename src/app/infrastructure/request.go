@@ -2,10 +2,10 @@ package infrastructure
 
 import (
 	"github.com/higayu624/portfolio_go/src/app/domain"
-	"github.com/higayu624/portfolio_go/src/app/requests"
+	"github.com/higayu624/portfolio_go/src/app/interfaces/requests"
 	"fmt"
 	"net/http"
-	"io/ioutil"
+	"io"
 )
 
 type RequestHandler struct {}
@@ -21,6 +21,6 @@ func (handler *RequestHandler) Request() (body domain.Playlist){
 	// 	return response, err
 	// }
 	defer response.Body.Close()
-	body, _ := ioutil.ReadAll(response.Body)
+	body, _ := io.ReadAll(response.Body)
 	return body
 }

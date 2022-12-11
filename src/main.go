@@ -10,3 +10,4 @@ func main(){
 	fmt.Println("server start")
 	infrastructure.Router.Run()
 }
+

@@ -5,5 +5,5 @@ import (
 )
 
 type RequestHandler interface {
-	Request()(domain.Playlist)
+	Request()(body domain.Playlist)
 }
