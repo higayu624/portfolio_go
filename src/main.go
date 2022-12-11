@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-
 	"github.com/higayu624/portfolio_go/src/app/infrastructure"
 )
 

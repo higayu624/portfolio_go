@@ -13,10 +13,10 @@ func init() {
 
 	r.Use(cors.Default())//apiへのアクセスを許可するURL, method(GET, POST), header情報を設定できる
 
-	taskController := controllers.NewTaskController(NewSqlHandler())//構造体を初期化
+	playlistController := controllers.NewPlaylistController()//構造体を初期化
 
 	//c *gin.Contextはurlのqueryの取得、POSTで送信されたjsonの取得などを行うことができる。
-	r.GET("/api/tasks", func(c *gin.Context) {taskController.Index(c)})//第一引数にEndpoint, 第二引数にControllerと呼ばれる関数を指定
+	r.GET("/api/playlist", func(c *gin.Context) {playlistController.Index(c)})//第一引数にEndpoint, 第二引数にControllerと呼ばれる関数を指定
 
 	Router = r//おまじない？
 }
