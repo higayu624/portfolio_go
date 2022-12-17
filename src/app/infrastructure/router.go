@@ -19,5 +19,5 @@ func init() {
 	//c *gin.Contextはurlのqueryの取得、POSTで送信されたjsonの取得などを行うことができる。
 	r.GET("/api/playlist", func(c *gin.Context) {playlistController.Index(c)})//第一引数にEndpoint, 第二引数にControllerと呼ばれる関数を指定
 
-	Router = r//おまじない？
+	Router = r//おまじない?
 }
